@@ -1,0 +1,131 @@
+.simple-modal
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height 100%
+	background-color rgba(#000, .5)
+	z-index 9999
+	overflow-y auto
+	overflow-x hidden
+	-webkit-overflow-scrolling touch
+	animation animationSimpleModalOverlay .25s 1
+	&::-webkit-scrollbar
+		width 4px
+	&::-webkit-scrollbar-thumb
+		background-color rgba(#fff, .66)
+	&__container,
+	&__middle
+		height 100%
+	&__container
+		margin-left auto
+		margin-right auto
+		padding-left 16px
+		padding-right 16px
+	&__middle,
+	&__box
+		width 100%
+	&__middle
+		display table
+	&__box
+		padding-top 16px
+		padding-bottom 16px
+		display table-cell
+		vertical-align middle
+		text-align center
+
+@keyframes animationSimpleModalOverlay
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+@keyframes animationSimpleModalBox
+	from
+		opacity: 0
+		transform: scale3d(0.95, 0.95, 0.95)
+	to
+		opacity: 1
+		transform: scale3d(1, 1, 1)
+
+.simple-modal-box
+	display inline-block
+	text-align left
+	background-color #fff
+	border-radius 6px
+	box-shadow 0 16px 64px rgba(#000, .05)
+	animation animationSimpleModalBox .25s 1
+	&--small
+		max-width 280px
+	&--middle
+		max-width 480px
+	&--large
+		max-width 640px
+	&__header,
+	&__content
+		padding-left 16px
+		padding-right 16px
+		padding-bottom 16px
+	&__header
+		padding-top 16px
+		position relative
+	&__title
+		padding-right 16px + 24px
+		font-size (16 / 16em)
+		line-height (24 / 16em)
+		font-weight 700
+	&__close
+		padding 0
+		cursor pointer
+		width 24px
+		height 24px
+		outline none
+		position absolute
+		top 16px
+		right 16px
+		background-color transparent
+		background-image url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.971 47.971'%3E%3Cpath d='M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z'/%3E%3C/svg%3E")
+		background-size 14px
+		background-position center
+		background-repeat no-repeat
+		border none
+		transition transform .25s ease-in-out, opacity .1s ease-in-out
+		.no-touch &:hover
+			transform rotate(90deg)
+		.no-touch &:active
+			opacity .7
+// 	&__message
+// 		font-size (14 / 16em)
+// 		line-height (20 / 14em)
+// 		p
+// 			margin-bottom 15px
+// 			&:last-child
+// 				margin-bottom 0
+
+
+// @media screen and (max-width: display_laptop)
+// 	.modal
+// 		&__container
+// 			width 100%
+// 		&__box
+// 			&--three,
+// 			&--four
+// 				width 280px
+// 			&--ten
+// 				width 100%
+
+// @media screen and (max-width: display_mobile_landscape)
+// 	.modal
+// 		&__container
+// 			gap(gap_touch)
+// 		&__box
+// 			margin-top gap_touch
+// 			margin-bottom gap_touch
+// 			padding-bottom gap_touch
+// 		&__header
+// 			padding-top gap_touch
+// 			padding-left gap_touch
+// 			padding-right ((gap_touch * 2) + 24px)
+// 			padding-bottom gap_touch
+// 		&__close
+// 			right gap_touch
