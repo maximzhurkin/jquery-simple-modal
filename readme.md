@@ -15,14 +15,17 @@ Very simple responsive jQuery modal plugin
 ### 2. Initialize plugin
 ```javascript
 $(document).ready(function() {
-  $('.button').click(function(){
-    $().simpleModal({
-      name: 'simple',
-      title: 'Simple modal',
-      content: '<p>Lorem ipsum dolor sit amet...</p>',
-      size: 'small',
-      freeze: true
-    });
+  $().simpleModal({
+    name: 'example',
+    title: 'Example',
+    content: '<button class="my-button">Lorem ipsum</button>',
+    size: 'small',
+    freeze: true,
+    callback: function() {
+      $('.simple-modal--example .my-button').click(function() {
+        console.log('Click from modal');
+      });
+    }
   });
 });
 ```
