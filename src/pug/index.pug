@@ -50,11 +50,16 @@ body
 				p
 					pre
 						| $().simpleModal({
-						|     name: 'simple',
-						|     title: 'Simple modal',
-						|     content: '&lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;',
+						|     name: 'example',
+						|     title: 'Example',
+						|     content: '&lt;button class=&quot;my-button&quot;&gt;Lorem ipsum&lt;/button&gt;',
 						|     size: 'small',
-						|     freeze: true
+						|     freeze: true,
+						|     callback: function() {
+						|       $('.simple-modal--example .my-button').click(function() {
+						|         console.log('Click from modal');
+						|       });
+						|     }
 						| });
 	section.demo
 		.demo__container

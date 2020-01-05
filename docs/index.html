@@ -3,9 +3,14 @@
         $().simpleModal();
     });
 });</pre></p><p><strong>Custom settings</strong></p><p><pre>$().simpleModal({
-    name: 'simple',
-    title: 'Simple modal',
-    content: '&lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;',
+    name: 'example',
+    title: 'Example',
+    content: '&lt;button class=&quot;my-button&quot;&gt;Lorem ipsum&lt;/button&gt;',
     size: 'small',
-    freeze: true
+    freeze: true,
+    callback: function() {
+      $('.simple-modal--example .my-button').click(function() {
+        console.log('Click from modal');
+      });
+    }
 });</pre></p></div></div></section><section class="demo"><div class="demo__container"><div class="demo__heading">Demo</div><div class="demo__content"><div class="demo__link"><a class="link link--dotted" href="#" data-action="modal-small">Show small modal</a></div><div class="demo__link"><a class="link link--dotted" href="#" data-action="modal-middle">Show middle modal</a></div><div class="demo__link"><a class="link link--dotted" href="#" data-action="modal-large">Show large modal</a></div><div class="demo__link"><a class="link link--dotted" href="#" data-action="modal-callback">Show from modal</a></div><div class="demo__link"><a class="link link--dotted" href="#" data-action="modal-unfreeze">Show small modal without freeze</a></div></div></div></section><footer class="footer"><div class="footer__container"><div class="footer__copyright">jQuery simple modal plugin by Max Zhurkin.</div><div class="footer__links"><div class="footer__link"><a class="github-button" href="https://github.com/maximzhurkin" aria-label="Follow @maximzhurkin on GitHub">Follow @maximzhurkin</a></div><div class="footer__link"><a class="github-button" href="https://github.com/maximzhurkin/jquery-simple-modal" data-icon="octicon-star" aria-label="Star maximzhurkin/jquery-simple-modal on GitHub">Star</a></div><div class="footer__link"><a class="github-button" href="https://github.com/maximzhurkin/jquery-simple-modal/fork" data-icon="octicon-repo-forked" aria-label="Fork maximzhurkin/jquery-simple-modal on GitHub">Fork</a></div><div class="footer__link"><a class="github-button" href="https://github.com/maximzhurkin/jquery-simple-modal/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download maximzhurkin/jquery-simple-modal on GitHub">Download</a></div></div></div></footer><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script><script src="https://buttons.github.io/buttons.js"></script><script src="js/jquery.simple-modal.min.js"></script><script src="js/example.min.js"></script></body>
