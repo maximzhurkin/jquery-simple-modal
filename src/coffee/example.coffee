@@ -58,4 +58,14 @@ $(document).ready ->
 			freeze: false
 		return
 
+	$('[data-action=modal-custom]').click (e) ->
+		e.preventDefault()
+
+		$().simpleModal
+			name: 'custom'
+			title: 'Custom'
+			content: '<div class="my-content"><p>Custom size 200px</p></div>'
+			size: 200
+		return
+
 	return

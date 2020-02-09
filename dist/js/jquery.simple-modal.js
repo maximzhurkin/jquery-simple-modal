@@ -25,8 +25,22 @@
       });
       methods.binding(name);
     },
+    isInteger: function(size) {
+      if (size === parseInt(size, 10)) {
+        return true;
+      } else {
+        return false;
+      }
+    },
     template: function(name, size, title, content) {
-      return "<div class=\"simple-modal simple-modal--" + name + "\">\n	<div class=\"simple-modal__container\">\n		<div class=\"simple-modal__middle\">\n			<div class=\"simple-modal__box\">\n				<div class=\"simple-modal-box simple-modal-box--" + size + "\">\n					<div class=\"simple-modal-box__header\">\n						<div class=\"simple-modal-box__title\">" + title + "</div>\n						<button class=\"simple-modal-box__close\" type=\"button\"></button>\n					</div>\n					<div class=\"simple-modal-box__content\">" + content + "</div>\n				</div>\n			</div>\n		</div>\n	</div>\n</div>";
+      var box;
+      console.log(methods.isInteger(size));
+      if (methods.isInteger(size)) {
+        box = '<div class="simple-modal-box" style="width: ' + size + 'px;">';
+      } else {
+        box = '<div class="simple-modal-box simple-modal-box--' + size + '">';
+      }
+      return "<div class=\"simple-modal simple-modal--" + name + "\">\n	<div class=\"simple-modal__container\">\n		<div class=\"simple-modal__middle\">\n			<div class=\"simple-modal__box\">\n				" + box + "\n					<div class=\"simple-modal-box__header\">\n						<div class=\"simple-modal-box__title\">" + title + "</div>\n						<button class=\"simple-modal-box__close\" type=\"button\"></button>\n					</div>\n					<div class=\"simple-modal-box__content\">" + content + "</div>\n				</div>\n			</div>\n		</div>\n	</div>\n</div>";
     },
     binding: function(name) {
       $(".simple-modal--" + name + " .simple-modal-box__close").click(function() {

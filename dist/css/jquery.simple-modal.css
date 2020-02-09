@@ -90,7 +90,7 @@
   top: 16px;
   right: 16px;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.971 47.971'%3E%3Cpath d='M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M7.773 7L13.84.935a.547.547 0 1 0-.774-.773L7 6.227.933.161A.547.547 0 1 0 .16.934l6.066 6.067L.16 13.067a.547.547 0 1 0 .773.774L7 7.774l6.066 6.067a.545.545 0 0 0 .774 0 .547.547 0 0 0 0-.774L7.773 7.001z' fill='%23000'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' d='M0 0H14V14H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   -webkit-background-size: 14px 14px;
           background-size: 14px;
   background-position: center;

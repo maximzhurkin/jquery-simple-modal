@@ -25,13 +25,22 @@
 			methods.binding name
 			return
 
+		isInteger: (size) ->
+			return if size == parseInt(size, 10) then true else false
+
 		template: (name, size, title, content) ->
+			console.log methods.isInteger(size)
+			if methods.isInteger(size)
+				box = '<div class="simple-modal-box" style="width: ' + size + 'px;">'
+			else
+				box = '<div class="simple-modal-box simple-modal-box--' + size + '">'
+
 			return """
 				<div class="simple-modal simple-modal--#{name}">
 					<div class="simple-modal__container">
 						<div class="simple-modal__middle">
 							<div class="simple-modal__box">
-								<div class="simple-modal-box simple-modal-box--#{size}">
+								#{box}
 									<div class="simple-modal-box__header">
 										<div class="simple-modal-box__title">#{title}</div>
 										<button class="simple-modal-box__close" type="button"></button>

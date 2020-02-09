@@ -11,6 +11,7 @@ head
 	link(href='favicon.ico' rel='shortcut icon' type='image/x-icon')
 	link(href='css/example.min.css' rel='stylesheet')
 	link(href='css/jquery.' + plugin + '.min.css' rel='stylesheet')
+	link(href="css/dark.min.css" media='(prefers-color-scheme: dark)' rel='stylesheet')
 body
 	header.header
 		.header__container
@@ -54,7 +55,7 @@ body
 						|     name: 'example',
 						|     title: 'Example',
 						|     content: '&lt;button class=&quot;my-button&quot;&gt;Lorem ipsum&lt;/button&gt;',
-						|     size: 'small',
+						|     size: 'small', // or integer for px
 						|     freeze: true,
 						|     callback: function() {
 						|       $('.simple-modal--example .my-button').click(function() {
@@ -76,6 +77,8 @@ body
 					a.link.link--dotted(href='#', data-action='modal-callback') Show from modal
 				.demo__link
 					a.link.link--dotted(href='#', data-action='modal-unfreeze') Show small modal without freeze
+				.demo__link
+					a.link.link--dotted(href='#', data-action='modal-custom') Show custom size modal
 	footer.footer
 		.footer__container
 			.footer__copyright jQuery simple modal plugin by Max Zhurkin.

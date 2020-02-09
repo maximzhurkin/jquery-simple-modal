@@ -77,7 +77,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('css:example', function() {
-	gulp.src('./src/stylus/example.styl')
+	gulp.src(['./src/stylus/example.styl', './src/stylus/dark.styl'])
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(stylus({'include css': true}))
@@ -117,7 +117,7 @@ gulp.task('assets', function() {
 gulp.task('watch', function () {
 	watch(['./src/coffee/example.coffee'], function() { gulp.start('js:example'); });
 	watch(['./src/coffee/jquery.' + plugin + '.coffee'], function() { gulp.start('js:plugin'); });
-	watch(['./src/stylus/example.styl'], function() { gulp.start('css:example'); });
+	watch(['./src/stylus/example.styl', './src/stylus/dark.styl'], function() { gulp.start('css:example'); });
 	watch(['./src/stylus/jquery.' + plugin + '.styl'], function() { gulp.start('css:plugin'); });
 	watch(['./src/pug/**/*.pug'], function() { gulp.start('refresh'); });
 });
