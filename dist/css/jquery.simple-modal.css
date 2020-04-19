@@ -41,11 +41,11 @@
   padding-bottom: 16px;
   display: table-cell;
   vertical-align: middle;
-  text-align: center;
 }
 .simple-modal-box {
-  display: inline-block;
-  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   background-color: #fff;
   -webkit-border-radius: 6px;
           border-radius: 6px;

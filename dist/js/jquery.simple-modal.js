@@ -34,9 +34,8 @@
     },
     template: function(name, size, title, content) {
       var box;
-      console.log(methods.isInteger(size));
       if (methods.isInteger(size)) {
-        box = '<div class="simple-modal-box" style="width: ' + size + 'px;">';
+        box = '<div class="simple-modal-box" style="max-width: ' + size + 'px;">';
       } else {
         box = '<div class="simple-modal-box simple-modal-box--' + size + '">';
       }
